@@ -1,4 +1,4 @@
-package com.xbb.order.entities;
+package com.xbb.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

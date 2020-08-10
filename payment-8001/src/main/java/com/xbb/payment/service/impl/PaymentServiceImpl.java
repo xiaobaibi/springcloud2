@@ -1,7 +1,7 @@
 package com.xbb.payment.service.impl;
 
+import com.xbb.entities.Payment;
 import com.xbb.payment.dao.PaymentDAO;
-import com.xbb.payment.entities.Payment;
 import com.xbb.payment.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

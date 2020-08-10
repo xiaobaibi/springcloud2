@@ -9,7 +9,7 @@
         select id,serial from payment where id=#{id};
     </select>
 
-    <resultMap id="payments" type="com.xbb.payment.entities.Payment">
+    <resultMap id="payments" type="com.xbb.entities.Payment">
         <id column="id" property="id" jdbcType="BIGINT"></id>
         <id column="serial" property="serial" jdbcType="VARCHAR"></id>
     </resultMap>

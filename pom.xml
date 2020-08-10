@@ -10,6 +10,8 @@
   <modules>
     <module>payment-8001</module>
     <module>order-80</module>
+    <module>commons</module>
+    <module>order-8100</module>
   </modules>
   <packaging>pom</packaging>
 

@@ -1,6 +1,6 @@
 package com.xbb.payment.service;
 
-import com.xbb.payment.entities.Payment;
+import com.xbb.entities.Payment;
 
 public interface PaymentService {
 

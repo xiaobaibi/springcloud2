@@ -1,8 +1,8 @@
 package com.xbb.payment.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.xbb.payment.entities.CommonResult;
-import com.xbb.payment.entities.Payment;
+import com.xbb.entities.CommonResult;
+import com.xbb.entities.Payment;
 import com.xbb.payment.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
