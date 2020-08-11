@@ -6,11 +6,15 @@ import com.xbb.entities.Payment;
 import com.xbb.payment.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @Slf4j
@@ -18,6 +22,9 @@ public class PaymentController {
 
     @Autowired
     private PaymentService paymentService;
+
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     @PostMapping(value = "/createPayment")
     public CommonResult createPayment(@RequestBody JSONObject requestBody){
@@ -42,5 +49,19 @@ public class PaymentController {
             return new CommonResult(401,"查询失败",byId);
         }
     }
+    @GetMapping(value = "/getDiscoveryClient")
+    public DiscoveryClient getDiscoveryClient(){
+        List<String> services = discoveryClient.getServices();
+        for (String service: services) {
+            log.info("----element : " +service);
+        }
+        List<ServiceInstance> instances = discoveryClient.getInstances("PAYMENT-SERVICE");
+        for (ServiceInstance instance: instances) {
+            log.info(instance.getServiceId() + "\t" + instance.getHost() +"\t" + instance.getPort()+"\t"+instance.getUri());
+        }
+        return this.discoveryClient;
+    }
+
+
 
 }
