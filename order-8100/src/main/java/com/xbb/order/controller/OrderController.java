@@ -19,7 +19,8 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    public String url = "http://localhost:8001";
+//    public String url = "http://localhost:8001";
+    public String url = "http://PAYMENT-SERVICE";
 
     @GetMapping(value = "/create")
     public CommonResult<Payment> create(Payment payment){
