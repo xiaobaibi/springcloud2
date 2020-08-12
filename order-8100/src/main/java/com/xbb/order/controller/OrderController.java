@@ -20,11 +20,10 @@ public class OrderController {
     private RestTemplate restTemplate;
 
 //    public String url = "http://localhost:8001";
-    public String url = "http://PAYMENT-SERVICE";
+    public String url = "http://payment-service";
 
     @GetMapping(value = "/create")
     public CommonResult<Payment> create(Payment payment){
-
         return restTemplate.postForObject(url.concat("/createPayment"),payment,CommonResult.class);
     }
 

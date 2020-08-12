@@ -1,14 +1,8 @@
 server:
   port: 8100
-
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8000/eureka
-
 spring:
   application:
     name: order-service
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181 #给zookeeper的地址
