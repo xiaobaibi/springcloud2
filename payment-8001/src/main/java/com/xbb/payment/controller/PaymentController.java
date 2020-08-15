@@ -42,7 +42,6 @@ public class PaymentController {
     @GetMapping(value = "/findPaymentById")
     public CommonResult findPaymentById(long id){
         Payment byId = paymentService.findById(id);
-        CommonResult commonResult = new CommonResult();
         if (!ObjectUtils.isEmpty(byId)){
             return new CommonResult(200,"查询成功",byId);
         }else{
