@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-8000/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-8000/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-8300/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-8300/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-8100/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-8100/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-openfeign-8200/src/main/java" charset="UTF-8" />

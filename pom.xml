@@ -13,6 +13,7 @@
     <module>order-8100</module>
     <module>eureka-8000</module>
       <module>order-openfeign-8200</module>
+      <module>gateway-8300</module>
   </modules>
   <packaging>pom</packaging>
 

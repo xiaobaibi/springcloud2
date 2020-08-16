@@ -1,0 +1,24 @@
+server:
+  port: 8300
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: payment_create
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/createPayment
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    hostname: cloud-gateway
